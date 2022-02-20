@@ -1,0 +1,22 @@
+{
+  "name": "algomusicportaldraft",
+  "version": "1.0.0",
+  "description": "A dapp to exchange music reccomendations!  Deployed on the Algorand testnet.  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antony-SS/SongShareAlgorandTest.git"
+  },
+  "author": "Antony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antony-SS/SongShareAlgorandTest/issues"
+  },
+  "homepage": "https://github.com/Antony-SS/SongShareAlgorandTest#readme",
+  "dependencies": {
+    "algosdk": "^1.13.1"
+  }
+}
