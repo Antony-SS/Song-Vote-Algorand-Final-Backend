@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "test": "test"
-
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/Antony-SS/SongShareAlgorandTest#readme",
   "dependencies": {
     "algosdk": "^1.13.1",
+    "dotenv": "^16.0.0",
     "pip": "^0.0.1",
     "python3": "^0.0.1"
   }
