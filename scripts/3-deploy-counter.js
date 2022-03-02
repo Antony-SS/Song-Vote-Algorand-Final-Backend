@@ -5,6 +5,17 @@ import {
   } from 'node:fs/promises';
 dotenv.config();
 
+const baseServer = 'https://testnet-algorand.api.purestake.io/ps2'
+const port = '';
+const token = {
+    'X-API-Key': process.env.API_KEY
+}
+
+const algodClient = new algosdk.Algodv2(token, baseServer, port); 
+
+let myaccount = algosdk.mnemonicToSecretKey(process.env.ACCOUNT_MNEMONIC);
+let sender = myaccount.addr;
+
 // helper function to compile program source  
 async function compileProgram(client, TealSource) {
     let encoder = new TextEncoder();
@@ -14,24 +25,14 @@ async function compileProgram(client, TealSource) {
     return compiledBytes;
 }
 
-const baseServer = 'https://testnet-algorand.api.purestake.io/ps2'
-const port = '';
-const token = {
-    'X-API-Key': process.env.API_KEY
-}
-
-const algodClient = new algosdk.Algodv2(token, baseServer, port); 
-
-const localInts = 0
-const localBytes = 0
-const globalInts = 1
-const globalBytes = 0
-
-let myaccount = algosdk.mnemonicToSecretKey(process.env.ACCOUNT_MNEMONIC);
-let sender = myaccount.addr;
 
 (async () => {
     try {
+        const localInts = 0
+        const localBytes = 0
+        const globalInts = 1
+        const globalBytes = 0
+
         let approvalProgramfile = await open('./contracts/artifacts/counter_approval.teal');
         let clearProgramfile = await open('./contracts/artifacts/counter_clear.teal');
 
