@@ -25,9 +25,9 @@ const algodClient = new algosdk.Algodv2(token, baseServer, port);
 let index = 75459438;
 
 let appArgs1 = [];
+let appArgs2 = [];
 let add = "Add";
 let deduct = "Deduct";
-let appArgs2 = []
 
 appArgs1.push(new Uint8Array(Buffer.from(add)));
 appArgs2.push(new Uint8Array(Buffer.from(deduct)));
