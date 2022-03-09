@@ -2,7 +2,7 @@
   "name": "algomusicportaldraft",
   "type": "module",
   "version": "1.0.0",
-  "description": "A dapp to exchange music reccomendations!  Deployed on the Algorand testnet. ",
+  "description": "A dapp to vote on songs!  Deployed on the Algorand testnet. ",
   "main": "index.js",
   "scripts": {
     "test": "test"
